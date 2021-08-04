@@ -10,9 +10,8 @@ public class LoginPage {
    private WebElement loginButton;
    private WebElement usernameField;
    private WebElement passwordField;
-   private String errorXpath = "//h3[@data-test = 'error']";
-   private String loginBtnXpath = "//div[@class='login-box']//input[@data-test = 'login-button']";
-   private String loginErrBtn = "error-button";
+   private final static String errorXpath = "//h3[@data-test = 'error']";
+   private final static String loginBtnXpath = "//div[@class='login-box']//input[@data-test = 'login-button']";
 
 
 
@@ -42,7 +41,7 @@ public class LoginPage {
     }
 
     public WebElement getErrorButton() {
-        return driver.findElement(By.className(loginErrBtn));
+        return driver.findElement(By.className("error-button"));
     }
 
     public String getFirstValue(String className){
