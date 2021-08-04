@@ -13,9 +13,6 @@ public class LoginPage {
    private final static String errorXpath = "//h3[@data-test = 'error']";
    private final static String loginBtnXpath = "//div[@class='login-box']//input[@data-test = 'login-button']";
 
-
-
-
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         loginButton = driver.findElement(By.xpath(loginBtnXpath));
@@ -26,7 +23,6 @@ public class LoginPage {
     public void fillUsername(String text){
         usernameField.sendKeys(text);
     }
-
 
     public void fillPassword(String text){
         passwordField.sendKeys(text);
